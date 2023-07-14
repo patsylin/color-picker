@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Very Organized Grocery List</title>
+  <link rel="stylesheet" href="grocerycss.css">
+  <style>
+    header {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+    h1 {
+      color: #ff6600;
+      text-align: center;
+    }
+    .grocery-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .grocery-box {
+      width: 48%;
+      background-color: #f9f1f1;
+      color: black;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+    .grocery-header {
+      background-color: #ffcc00;
+      padding: 5px;
+      margin-bottom: 10px;
+      font-size: larger;
+      text-align: center;
+    }
+    .grocery-header.large {
+      font-size: x-large;
+    }
+    .dotted-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    .dotted-list li {
+      display: list-item;
+      text-align: left;
+      margin-left: 1.5em;
+      text-indent: -1.5em;
+    }
+    .grocery-box.gray {
+      background-color: white;
+      color: black;
+      width: 100%;
+    }
+    .grocery-box-container {
+      display: flex;
+      justify-content: space-between;
+    }
+    .grocery-box:not(.gray) {
+      margin-right: 20px; /* Add white space between boxes */
+    }
+
+    /* Extend Canned Goods and Snacks boxes */
+    .grocery-box.gray.extend {
+      width: calc(100% + 20px); /* Extend the width and account for the margin */
+      margin-right: -20px; /* Compensate for the negative margin */
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Very Organized Grocery List</h1>
+  </header>
+
+  <div class="grocery-section">
+    <div class="grocery-box gray extend">
+      <h2 class="grocery-header large">Pantry Items</h2>
+      <div class="grocery-box-container">
+        <div class="grocery-box">
+          <h2 class="grocery-header">Dry Goods</h2>
+          <ul class="dotted-list">
+            <li>Rice</li>
+            <li>Oats</li>
+            <li>Cereal</li>
+            <li>Pancake Mix</li>
+          </ul>
+        </div>
+        <div class="grocery-box">
+          <h2 class="grocery-header">Canned Goods</h2>
+          <ul class="dotted-list">
+            <li>Corn</li>
+            <li>Tuna</li>
+            <li>Green Beans</li>
+            <li>Beans</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="grocery-box gray extend">
+      <h2 class="grocery-header large">Freezer Items</h2>
+      <div class="grocery-box-container">
+        <div class="grocery-box">
+          <h2 class="grocery-header">Veggies</h2>
+          <ul class="dotted-list">
+            <li>Broccoli</li>
+            <li>Carrots</li>
+            <li>Cauliflower</li>
+            <li>Bell Peppers</li>
+          </ul>
+        </div>
+        <div class="grocery-box">
+          <h2 class="grocery-header">Snacks</h2>
+          <ul class="dotted-list">
+            <li>Veggie Chicken Nuggets</li>
+            <li>Chips</li>
+            <li>M&Ms</li>
+            <li>Mango Chips</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
